@@ -1,0 +1,32 @@
+default:
+  path: /default
+  defaults: { controller: 'Tests\HelloWorldController', action: 'default' }
+
+with-args:
+  path: /with-args/{foo}/{bar}
+  defaults: { controller: 'Tests\HelloWorldController', action: 'helloWorld'}
+
+omitted-args:
+  path: /omitted-args/{foo}/{bar}
+  defaults: { controller: 'Tests\HelloWorldController', action: 'helloWorld', bar: bar }
+
+# errors
+missing-controller:
+  path: /missing-controller
+  defaults: { action: 'index' }
+
+missing-action:
+  path: /missing-action
+  defaults: { controller: 'Tests\HelloWorldController' }
+
+unknown-controller:
+  path: /unknown-controller
+  defaults: { controller: 'Tests\UnknownController', action: 'index' }
+
+unknown-action:
+  path: /unknown-action
+  defaults: { controller: 'Tests\HelloWorldController', action: 'unknown' }
+
+missing-arg:
+  path: /missing-arg
+  defaults: { controller: 'Tests\HelloWorldController', action: 'helloWorld' }

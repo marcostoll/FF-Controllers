@@ -1,0 +1,58 @@
+{
+  "name": "fastforward/controllers",
+  "description": "A component providing controller and front controller logic - part of the Fast Forward Components Collection",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Marco Stoll",
+      "email": "marco@fast-forward-encoding.de",
+      "homepage": "http://marcostoll.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "fastforward/events": "^1.0.0",
+    "fastforward/factories": "^1.0.0",
+    "fastforward/templating": "^1.0.0",
+    "symfony/config": "~4.3",
+    "symfony/http-foundation": "~4.3",
+    "symfony/routing": "~4.3",
+    "symfony/yaml": "~4.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/marcostoll/FF-DataStructures"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/marcostoll/FF-Events"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/marcostoll/FF-Factories"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/marcostoll/FF-Templating"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/marcostoll/FF-Utils"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FF\\Controllers\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  }
+}
